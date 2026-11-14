@@ -1,0 +1,10 @@
+torch>=2.2
+torchvision>=0.17
+fastapi>=0.110
+uvicorn[standard]>=0.29
+pillow
+numpy
+# only needed for training / notebook plots
+pandas
+pyarrow
+matplotlib
