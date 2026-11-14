@@ -1,4 +1,4 @@
-# Assignment 4 – Diffusion & Energy-Based Generators API
+# Assignment 4 
 
 This builds on the Module 6 class activity (a `helper_lib` package with a GAN) by adding two CIFAR-10 image generators and serving all three through FastAPI in Docker:
 
