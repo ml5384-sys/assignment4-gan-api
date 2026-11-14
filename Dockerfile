@@ -3,8 +3,8 @@ FROM python:3.11-slim
 WORKDIR /app
 
 # CPU-only PyTorch keeps the image small; works on Intel and Apple Silicon (arm64) hosts.
-RUN pip install --no-cache-dir torch torchvision --index-url https://download.pytorch.org/whl/cpu
-COPY requirements.txt .
+ARG TORCH_INDEX_URL=https://download.pytorch.org/whl/cpu
+RUN pip install --no-cache-dir torch torchvision --index-url ${TORCH_INDEX_URL}
 RUN pip install --no-cache-dir fastapi "uvicorn[standard]" pillow numpy
 
 COPY helper_lib/ helper_lib/
